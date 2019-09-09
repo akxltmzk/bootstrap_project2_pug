@@ -1,0 +1,236 @@
+extends layout
+
+block content
+
+  //- navbar
+  nav.navbar.navbar-expand-md.navbar-light.fixed-top.py-4#main-nav
+    .container
+      a.navbar-brand(href="#home")
+        img(src="images/mlogo.png" width="50" height="50")
+        h3.d-inline.align-middle Mizuxe
+      button.navbar-toggler(data-toggle="collapse" data-target="#navbarCollapse")
+        span.navbar-toggler-icon
+      .collapse.navbar-collapse#navbarCollapse
+        ul.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link(href="#home") Home
+          li.nav-item
+            a.nav-link(href="#about") About
+          li.nav-item
+            a.nav-link(href="#authors") Meet The Authors
+          li.nav-item
+            a.nav-link(href="#contact") Contact
+  
+  //- show case
+  section.py-5#showcase
+    .primary-overlay.text-white
+      .container
+        .row  
+          .col-lg-6.text-center
+            h1.display-2.mt-5.pt-5 Do What You Dream Of...
+            p.lead Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                   | Quidem error ev, unde?
+            a.btn.btn-outline-secondary.btn-lg.text-white(a href="#")
+              i.fas.fa-arrow-right Read More
+          .col-lg-6
+            img.img-fluid.d-none.d-lg-block(src="images/book.png")
+  
+  //- newsletter
+  section.bg-dark.text-white.py-5#newsletter
+    .container
+      .row
+        .col-md-4
+          input.form-control.form-control-lg.mb-resp(type="text" placeholder="Enter name")
+        .col-md-4
+          input.form-control.form-control-lg.mb-resp(type="email" placeholder="Enter Email")
+        .col-md-4
+          button.btn.btn-primary.btn-lg.btn-block.mb-resp
+            i.fas.fa-envelope-open-o Subscribe
+  
+  //- boxes
+  section.py-5#boxes
+    .container
+      .row
+        .col-md-3
+          .card.text-center.border-primary.mb-resp
+            .card-body
+              h3.text-primary Be Better
+              p.text-muted Lorem ipsum dolor sit amet consec
+        .col-md-3
+          .card.text-center.border-primary.mb-resp
+            .card-body
+              h3 Be Smarter
+              p Lorem ipsum dolor sit amet consec
+        .col-md-3
+          .card.text-center.border-primary.mb-resp
+            .card-body
+                h3.text-primary Be Faster
+                p.text-muted Lorem ipsum dolor sit amet consec
+        .col-md-3
+          .card.text-center.border-primary.mb-resp
+            .card-body
+              h3 Be Strong
+              p Lorem ipsum dolor sit amet consec
+    
+  //- about / why section
+  section.py-5.text-center.bg-light#about
+    .container
+      .row
+        .col
+          .info-header.mb-5
+            h1.text-primary.pb-3 Why This Book?
+            p.lead.pb-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolorem, quasi omnis
+                        | repellat incidunt
+                        | illo. Ratione,
+                        | commodi. Beatae asperiores do?
+          #accordion
+            .card
+              .card-header
+                h5.mb-0
+                  div(href="#collapse1" data-toggle="collapse" data-parent="#accordion")
+                    i.fas.fa-arrow-circle-down Get Inspired
+              .collapse.show#collapse1
+                .card-body
+                  | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio neque harum perspiciatis nulla,
+                  | pariatur voluptate cum dicta recusandae cumque quasi, ducimus laboriosam quia natus saepe
+                  | exercitationem
+                  | delectus ipsa explicabo esse.
+            .card
+              .card-header
+                h5.mb-0
+                  div(href="#collapse2" data-toggle="collapse" data-parent="#accordion")
+                    i.fas.fa-arrow-circle-down Gain The Knoledge
+              .collapse#collapse2
+                .card-body
+                  | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio neque harum perspiciatis nulla,
+                  | pariatur voluptate cum dicta recusandae cumque quasi, ducimus laboriosam quia natus saepe
+                  | exercitationem
+                  | delectus ipsa explicabo esse.
+            .card
+              .card-header
+                h5.mb-0
+                  div(href="#collapse3" data-toggle="collapse" data-parent="#accordion")
+                    i.fas.fa-arrow-circle-down Open Your Mind
+              .collapse#collapse3
+                .card-body
+                  | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio neque harum perspiciatis nulla,
+                  | pariatur voluptate cum dicta recusandae cumque quasi, ducimus laboriosam quia natus saepe
+                  | exercitationem
+                  | delectus ipsa explicabo esse.
+
+  //- authors
+  section.my-5.text-center#authors
+    .container
+      .row
+        .col
+          .info-header.mb-5
+            h1.text-primary.pb-3 Meet The Authors
+            p.lead Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore expedita incidunt sapiente
+
+      .row
+        .col-lg-3.col-md-6
+          .card
+            .card-body
+              img.img-fluid.rounded-circle.w-50.mb-3(src="images/person1.jpg")
+              h3 Susan Williams
+              h5.text-muted Lead Writer
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates rem obcaecati quam eum sed. 
+              .d-flex.justify-content-center
+                .p-4
+                  a(href="http://facebook.com")
+                    i.fab.fa-facebook  
+                .p-4
+                  a(href="http://twitter.com")
+                    i.fab.fa-twitter 
+                .p-4
+                  a(href="http://facebook.com")
+                    i.fab.fa-instagram 
+        .col-lg-3.col-md-6
+          .card
+            .card-body
+              img.img-fluid.rounded-circle.w-50.mb-3(src="images/person2.jpg")
+              h3 Grace Simith
+              h5.text-muted Co-Writer
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates rem obcaecati quam eum sed. 
+              .d-flex.justify-content-center
+                .p-4
+                  a(href="http://facebook.com")
+                    i.fab.fa-facebook  
+                .p-4
+                  a(href="http://twitter.com")
+                    i.fab.fa-twitter 
+                .p-4
+                  a(href="http://facebook.com")
+                    i.fab.fa-instagram 
+        .col-lg-3.col-md-6
+          .card
+            .card-body
+              img.img-fluid.rounded-circle.w-50.mb-3(src="images/person3.jpg")
+              h3 John Doe
+              h5.text-muted Editor
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates rem obcaecati quam eum sed. 
+              .d-flex.justify-content-center
+                .p-4
+                  a(href="http://facebook.com")
+                    i.fab.fa-facebook  
+                .p-4
+                  a(href="http://twitter.com")
+                    i.fab.fa-twitter 
+                .p-4
+                  a(href="http://facebook.com")
+                    i.fab.fa-instagram 
+
+        .col-lg-3.col-md-6
+          .card
+            .card-body
+              img.img-fluid.rounded-circle.w-50.mb-3(src="images/person4.jpg")
+              h3 Kevin Swanson
+              h5.text-muted Designer
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates rem obcaecati quam eum sed. 
+              .d-flex.justify-content-center
+                .p-4
+                  a(href="http://facebook.com")
+                    i.fab.fa-facebook  
+                .p-4
+                  a(href="http://twitter.com")
+                    i.fab.fa-twitter 
+                .p-4
+                  a(href="http://facebook.com")
+                    i.fab.fa-instagram            
+
+  //- contact
+  section.bg-light.py-5#contact
+    .container
+      .row
+        .col-lg-9
+          h3 Get In Touch
+          p.lead Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, placeat.
+          form(action="")
+            .input-group.input-group-lg.mb-3
+              .input-group-prepend
+                span.input-group-text
+                  i.fas.fa-user
+              .input.form-control(type="text" placeholder="Nmae")
+
+            .input-group.input-group-lg.mb-3
+              .input-group-prepend
+                span.input-group-text
+                  i.fas.fa-envelope
+              .input.form-control(type="email" placeholder="Email")
+
+            .input-group.input-group-lg.mb-3
+                  .input-group-prepend
+                    span.input-group-text
+                      i.fas.fa-pencil-alt
+                  textarea.input.form-control(placeholder="Message" rows="5")
+          .col-lg-3.align-self-center
+            img.img-fluid(src="images/mlogo.png")
+        
+  //- footer
+  footer.py-5.bg-primary.text-white#main-footer
+    .container
+      .row.text-center
+        .col-md-6.m-auto
+          p.lead 
+            |Copyright &copy; 
+            span#year
